@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Shopping Web App</title> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar Section  -->
+    <div class="top__navbar">
+        <div class="logo__container">
+            <div class="logo__box">
+                <img src="images/swiggy_logo.jpeg" alt="" id="swiggy__image">
+            </div>
+        </div>
+        <div class="navbar_data">
+            <button id="set_location" href='/'>Set Location</button>
+            <button id="choose_location" href='/'>Click to Choose Location</button>
+
+            <button id="gap" href='/'></button>
+
+            <button id="help" href='/'>Help</button>
+
+            <button id="sign" href='/'>Sign in</button>
+
+            <button id="cart" href='/'>Cart</button>
+        </div>
+    </div>
+    <div class="middle__navbar">
+        <h3 class="address">Home/Bangalore/BTM - Bangalore/Kitchens of Punjab</h3>
+    </div>
+
+    <!-- Restraunt Section -->
+
+    <div class="restraunt__background">
+        <img src="images/pic1.jpeg" alt="" id="restraunt__image">
+        <ul class="detail">
+            <li class="restraunt__name">Kitchen of Punjab</h1>
+        
+            <li class="description">Punjabi, North India</li> 
+        
+            <li class="description">Bilekahalli, BTM - Bangalore</li>
+            
+        </ul>
+        <input type="text" id="search__food" placeholder="🔍 Search for food..."> 
+
+        <button id="Veg__button">☐Veg Only</button>
+        <button id="favourite__button">♡ Favourite</button>
+    </div>
+    <!-- Body Section -->
+    <div class="food__categories__container">
+        <ul id="food__categories">
+            <a class="categories">Recommended</a>
+            <a class="categories">Starters</a>
+            <a class="categories">Family Binge Packs</a>
+            <a class="categories">Main Course</a>
+            <a class="categories">Rice & Indian Bread</a>
+            <a class="categories">Premium Thalis</a>
+            <a class="categories">Desserts & Beverages</a>
+            <a class="categories">Accompaniments</a>
+        </ul>
+    </div>
+
+    <div class="cart__empty__container">
+        <div class="cart__empty__text__box">
+            <h1 class="cart__empty__text">Cart Empty</h1>
+        </div>
+        <div class="cart__empty__image__box">
+            <img src="images/cart_empty.jpeg" alt="" class="cart__empty_img">
+        </div>
+        <div id="food__quote__box">
+            <p id="food__quote__first">Good food is always cooking! </p>
+            <p id="food__quote__second">Go ahead, order some yummy items from the menu.</p>
+        </div>
+    </div>
+
+    <div id="food__section__header">
+        <h1 id="recomend__title">Recomended</h1>
+        <h3 id="recomended__count">43 ITEMS</h3>
+    </div>
+
+    <div class="food__items__description">
+        <div id="first__food__item">
+            <img src="images/green.jpeg" alt="" class="food__class__img">
+            <h3 class="food__item__name">Veg Platter</h3>
+            <h4 class="food__item__price">₹699</h4>
+            <p class="food__item__info">An authentic veg platter with 3 pieces of Paneer Achari, 3 pieces of Hara Bhara, 3 pieces of Veg Seekh and 3 pieces of Malai Chaap.</p>
+            <img class="food__image__box" src="images/first__dish.jpeg">
+            <button class="add__food__button">ADD</button>
+        </div>
+        <div id="second__food__item">
+            <img src="images/red.jpeg" alt="" class="food__class__img">
+            <h3 class="food__item__name">Non Veg Platter</h3>
+            <h4 class="food__item__price">₹899</h4>
+            <p class="food__item__info">An authentic non veg platter with 3 pieces of Barnala Mathi Chicken Tikka, 3 pieces of Dhaniya Chicken, 3 pieces of Tawa Chicken and 3 pieces of Chicken Kebab.</p>
+            <img class="food__image__box" src="images/second__dish.jpeg">
+            <button class="add__food__button">ADD</button>
+        </div>
+    </div>
+</body>
+</html>

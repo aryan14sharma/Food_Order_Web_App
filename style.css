@@ -1,0 +1,384 @@
+*{
+    color:#ffffff;
+    margin: 0 0;
+    display: inline;
+}
+
+.top__navbar{
+    color: #ffffff;
+    height: 10vh;
+    width: 10vw;
+}
+
+.logo__container{
+    display: inline;
+    color: #ffffff;
+    height: 10vh;
+    width: 0;
+}
+
+.logo__box{
+    display: inline;
+    color: #ffffff;
+    height: 10vh;
+}
+
+#swiggy__image{
+    height: 8vh;
+    width: 8vh;
+}
+
+.navbar__data{
+    color: #ffffff;
+    font-style: italic;
+    font-size: large;
+    height: 5vh;
+    width: 0vw;
+}
+
+#set_location{
+    background-color: #ffffff;
+    color: black;
+    border: white;
+    position: relative;
+    bottom: 2vh;
+    /* text-decoration: underline;  */
+    font-size: small;
+    font-weight: 400;
+    display:inline;
+    height: 5vh;
+    width: 10vw;
+}
+
+#choose_location{
+    background-color: #ffffff;
+    color: rgb(130, 123, 123);
+    border: white;
+    position: relative;
+    bottom: 2vh;
+    font-size: small;
+    font-weight: 400;
+    display:inline;
+    height: 5vh;
+    width: 15vw;
+}
+
+
+#gap{
+    background-color: #ffffff;
+    color: rgb(130, 123, 123);
+    border: white;
+   
+    font-size: large;
+    font-weight: 400;
+    display:inline;
+    height: 5vh;
+    width: 45vw;
+}
+
+
+#help{
+    background-color: #ffffff;
+    color: black;
+    border: white;
+    margin: 1rem;
+    font-size: large;
+    font-weight: 400;
+    display:inline;
+    height: 5vh;
+    /* width: 30vw; */
+}
+
+
+#sign{
+    background-color: #ffffff;
+    color: black;
+    border: white;
+    font-size: large;
+    font-weight: 400;
+    display:inline;
+    height: 5vh;
+    margin: 1rem;
+}
+
+
+#cart{
+    background-color: #ffffff;
+    color: black;
+    border: white;
+    font-size: large;
+    font-weight: 400;
+    display:inline;
+    height: 5vh;
+    margin: 1rem;
+    /* width: 30vw; */
+}
+
+.middle__navbar{
+    display: flex;
+    align-content: center;
+    background-color:rgb(237, 237, 237);
+    width: 100vw;
+    height: 4vh;
+}
+
+.address{
+    color: rgb(130, 123, 123);
+    font-size: small;
+    align-content: center;
+    font-weight: 400;
+    display:inline;
+}
+
+.restraunt__background{
+    display: flex;
+    background-color: rgb(19, 18, 18);
+    height: 35vh;
+    width: 100vw;
+}
+
+#restraunt__image{
+    margin-top: 5vh;
+    margin-left: 4vw;
+    margin-right: 1vw;
+    height: 25vh;
+    width: 18vw;
+    display: flex;
+}
+
+.restraunt__name{
+    display: flex;
+    font-size: 2rem;
+    width:30vw;
+    color: white;
+    font-weight: 400;
+    margin-top: 7vh;
+    margin-bottom: 3vh;
+}
+
+.description{
+    display: flex;
+    color:grey;
+    font-weight: 300;   
+    margin: 1vh;
+    margin-bottom: 3vh;
+    margin-left: 1vw;
+}
+
+#search__food{
+    background-color: white;
+    height: 2rem;
+    width: 14rem;
+    font-size: 1rem;
+    border: white;
+    position: relative;
+    box-shadow: 2px grey;
+    right : 380px;
+    top : 210px;
+}
+
+#Veg__button{
+    background-color: #ffffff;
+    border: white;
+    height: 2rem;
+    color:black;
+    width: 7rem;
+    font-size: 1rem;
+    position: relative;
+    right : 340px;
+    top : 210px;
+}
+
+#favourite__button{
+    background-color: white;
+    border: white;
+    height: 2rem;
+    color:black;
+    width: 7rem;
+    font-size: 1rem;
+    position: relative;
+    right : 320px;
+    top : 210px;
+}
+
+.food__categories__container{
+    height: 50vh;
+    width: 20vw;
+    margin: 3rem;
+    background-color:white;
+    display: flex;
+}
+
+.categories{
+    height: 2em;
+    align-content: flex-end;
+    color:rgb(62, 61, 61);
+    display:flex;
+}
+
+#food__categories :nth-child(1){
+    color:tomato;
+    height: 2em;
+    align-content: flex-end;
+    display: flex;
+}
+
+.cart__empty__container{
+    background-color:white;
+    display: inline;
+    position: absolute;
+    height: 28rem;
+    width: 18rem;
+    margin-top: 2rem;
+    margin-right: 5rem;
+    margin-left: 1rem;
+    right: 0vw;
+    top: 50vh;
+}
+.cart__empty__text{
+    font-weight: 600;
+    color: gray;
+    margin-left: 1rem;
+}
+
+.cart__empty_img{
+    display: block;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    height:15rem;
+    width:15rem;
+}
+
+#food__quote__box{
+    margin-left: 1rem; 
+    margin-right: 4rem;
+}
+
+#food__quote__first{
+    margin-left: 1rem;
+    height: 1rem;
+    font-size: larger;
+    position: relative;
+    color:gray;
+    font-weight: 300;
+    display: flex;
+}
+
+#food__quote__second{
+    margin-left: 1rem;
+    height: 1rem;
+    margin-top:0.3rem;
+    width:15rem;
+    font-size: larger;
+    position: relative;
+    color:gray;
+    font-weight: 300;
+    display: flex;
+}
+
+#food__section__header{
+    background-color: white;
+    width:30rem;
+    height: 4rem;
+    display: block;
+    position: absolute;
+    left:25vw;
+    top: 60vh;
+}
+#recomend__title{
+    margin-bottom: 0.2rem;
+    font-size: 2rem;
+    color:black;
+    display:block;
+}
+
+#recomended__count{
+    display:block;
+    font-weight: 200;
+    font-size: 1rem;
+    color:gray;
+}
+
+.food__items__description{
+    background-color: white;
+    position: absolute;
+    height:60vh;
+    width: 45vw;
+    left:25vw;
+    top: 75vh;
+}
+
+#first__food__item{
+    height:30vh;
+    width:45vw;
+    background-color: white;
+    position: absolute;
+}
+
+
+#second__food__item{
+    height:30vh;
+    width:45vw;
+    top:30vh;
+    background-color: white;
+    position: absolute;
+}
+
+.food__item__name{
+    color:black;
+    display: block;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.food__item__price{
+    margin: 0.8rem 0;
+    font-weight: 600;
+    color:black;
+    display: block;
+}
+
+.food__item__info{ 
+    display: block;
+    width: 30vw;
+    color:gray;
+    font-weight: 400;
+    margin-top: 1vh;
+}
+
+
+.add__food__button{
+    color:green;
+    height: 1.5rem;
+    width: 4rem;
+}
+
+.food__image__box{
+    height: 14vh;
+    width: 9vw;
+    margin-left: 1rem;
+    display: block;
+    position: relative;
+    left: 30vw;
+    border-radius: 0.7rem;
+    bottom: 20vh;
+}
+
+.add__food__button{
+    bottom: 22vh;
+    left: 32.5vw;
+    font-weight: 600;
+    height:2rem;
+    width: 5.5rem;
+    border-width: 0.05rem;
+    border-color: white;
+    position: relative;
+    background-color: white;
+}
+
+.food__class__img{
+    height: 0.8rem;
+    width: 0.8rem;
+    margin-bottom: 0.6rem;
+}
+
