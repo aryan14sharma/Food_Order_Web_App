@@ -1,10 +1,11 @@
+import foodData from "./data.json" assert {type: "json"};
+
 let mode={
     cartData:{
         dishes:[],
         total: 0,
         totalCount:0
       },
-    
   init: function(data){
     this.cartData=data;
   },
@@ -25,7 +26,6 @@ let mode={
     this.cartData.total+=item.price;
     this.totalCount+=1;
   },
-
   countOfItem(id){
       this.dishes.forEach(item => {
           if(item.id==id)return item.count;
@@ -44,36 +44,92 @@ let mode={
 }
 
 let view={
+    
     init(){
-        document.getElementsByClassName('items__description')[0]
+        document.getElementsByClassName('add__food__button')[0]
         .addEventListener('click', (event) => {
+            console.log(octopus.items);
           this.handleEvent(event);
         });
     },
+   emptyCart() {
+    const emptycart = `<div class="emptyCart">
+            <h3 class="secondaryH3">Empty Cart</h3>
+            <p class="lightWeightedText"></p>
+            <div class="emptyCart">
+              <p class="secondaryP">
+                Good food is always cooking! Go ahead, order some yummy items from the menu.
+              </p>
+            </div>
+          </div>`;
+    return emptycart;
+  },
+   buildCart(cartItems) 
+  {
+    if (cartItems.totalItems == 0) {
+      return emptyCart();
+    }
+    let cartHeader = this.buildCartHeader(cartItems.totalItems);
+    let items = this.buildCartItems(cartItems.dishes);
+    let cart = `
+      <div class="cartItems">
+        ${cartHeader}
+        ${items}
+        <div class="checkout">
+          <div class="subtotal">
+            <h4>Total</h4>
+            <span>${cartItems.total}</span>
+          </div>
+          <div>
+            <button>Checkout</button>
+          </div>
+        </div>
+      </div>
+    `;
+    return cart;
+  },
+  
+   buildCartHeader(len) {
+    let header = ` <div>
+            <h1>Cart</h1>
+            <p>${len} ${len == 1 ? 'Item' : 'Items'}</p>
+          </div>`;
+    return header;
+  },
+  
+   buildCartItems(dishes) {
+    let items = ``;
+    dishes.forEach((dish) => {
+      items += `<div class="cartItem">
+
+              <div>
+                <h3>${dish.food_name}</h3>
+                <p>${dish.subTotal}</p>
+              </div>
+              <button id="${dish.id}" class="secondaryButton" >
+                  
+                  <span class="quantity">${dish.quantity}</span>
+                  
+              </button>
+            </div>
+            `;
+    });
+    return items;
+  },
+
     handleEvent(event) {
         let dishClassName = event.target.parentElement.className;
         let category = dishClassName.split(' ')[0];
-      if (event.target.innerHTML === 'Add')
+        console.log(category);
+      if (event.target.innerHTML === 'ADD')
      {
-      octopus.addToCart(foodData[category][0]);
+       console.log(foodData[category][0]);
+       octopus.octAddItem(foodData[category][0]);
       }
     }
-    ,
-    buildFoodTemplate(data){
-        return ` 
-        <div class="food__item__in__cart">
-            <h3 class="food__item__name">${data.id}</h3>
-            <h4 class="food__item__price">${data.count*data.price}</h4>
-    </div>
-    `;
-    }
-    ,
-    buildCartView(){
-        var cartItems=octopus.octSendData();
-        document.getElementById("cart__empty__container").innerHTML=`${cartItems.map(this.buildFoodTemplate).join("")}`;
-    }
+    
     ,render(cartItems){
-        let cartView=this.buildCartView();
+        let cartView=this.buildCart(cartItems);
         document.getElementsByClassName("cart__empty__container").innerHTML=cartView;
     }
 }
@@ -87,7 +143,7 @@ let octopus = {
     },
 
     octSendData(){
-        return this.items;
+        return octopus.items;
     },
 
     octGetData(){
